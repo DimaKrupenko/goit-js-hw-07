@@ -25,9 +25,18 @@ function onClickPicture(evt) {
   }
 
   const instance = basicLightbox.create(`
-    
-        <img src=${evt.target.getAttribute("data-source")} >
-`);
 
+          <img src=${evt.target.getAttribute("data-source")} >
+  `);
+  window.addEventListener("keydown", onKeyPress);
   instance.show();
+}
+
+function onKeyPress(evt) {
+  window.removeEventListener("keydown", onKeyPress);
+  if (evt.code === "Escape") {
+    console.log("ghbdtn", evt.code);
+    const div = document.querySelector(".basicLightbox--visible");
+    div.classList.remove("basicLightbox--visible");
+  }
 }
