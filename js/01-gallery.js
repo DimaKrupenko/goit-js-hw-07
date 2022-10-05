@@ -35,7 +35,6 @@ function onClickPicture(evt) {
 function onKeyPress(evt) {
   window.removeEventListener("keydown", onKeyPress);
   if (evt.code === "Escape") {
-    console.log("ghbdtn", evt.code);
     const div = document.querySelector(".basicLightbox--visible");
     div.classList.remove("basicLightbox--visible");
   }
