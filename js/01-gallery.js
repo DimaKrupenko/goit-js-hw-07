@@ -26,16 +26,17 @@ function onClickPicture(evt) {
 
   const instance = basicLightbox.create(`
 
-          <img src=${evt.target.getAttribute("data-source")} >
+          <img src=${evt.target.dataset.source} >
   `);
-  window.addEventListener("keydown", onKeyPress);
   instance.show();
+  window.addEventListener("keydown", onKeyPress);
 }
 
 function onKeyPress(evt) {
   window.removeEventListener("keydown", onKeyPress);
   if (evt.code === "Escape") {
-    const div = document.querySelector(".basicLightbox--visible");
-    div.classList.remove("basicLightbox--visible");
+    const div = document.querySelector(".basicLightbox");
+
+    div.classList.remove("basicLightbox--visible", "basicLightbox");
   }
 }
