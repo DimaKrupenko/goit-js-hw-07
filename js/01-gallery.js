@@ -29,14 +29,14 @@ function onClickPicture(evt) {
           <img src=${evt.target.dataset.source} >
   `);
   instance.show();
+
   window.addEventListener("keydown", onKeyPress);
-}
 
-function onKeyPress(evt) {
-  window.removeEventListener("keydown", onKeyPress);
-  if (evt.code === "Escape") {
-    const div = document.querySelector(".basicLightbox");
-
-    div.classList.remove("basicLightbox--visible", "basicLightbox");
+  function onKeyPress(evt) {
+    window.removeEventListener("keydown", onKeyPress);
+    if (evt.code === "Escape") {
+      instance.close(); // const div = document.querySelector(".basicLightbox");
+      // div.classList.remove("basicLightbox--visible", "basicLightbox");
+    }
   }
 }
