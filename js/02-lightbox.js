@@ -14,7 +14,7 @@ const itemEl = galleryItems
       //     </div> `
       `<div class="gallery__item">
     <a class="gallery__link" href=${item.original} onclick="return false;">
-    <img class="gallery__image" src=${item.preview} alt='${item.description}' alt = 250vms title='${item.description}'/></a>
+    <img class="gallery__image" src=${item.preview} alt='${item.description}' title='${item.description}'/></a>
     
 </div>
           `
