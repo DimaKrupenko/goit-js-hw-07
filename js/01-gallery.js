@@ -35,7 +35,8 @@ function onClickPicture(evt) {
   function onKeyPress(evt) {
     window.removeEventListener("keydown", onKeyPress);
     if (evt.code === "Escape") {
-      instance.close(); // const div = document.querySelector(".basicLightbox");
+      instance.close();
+      // const div = document.querySelector(".basicLightbox");
       // div.classList.remove("basicLightbox--visible", "basicLightbox");
     }
   }
